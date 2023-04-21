@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeChimp.Backend.Assessment", "src\TimeChimp.Backend.Assessment\TimeChimp.Backend.Assessment.csproj", "{ED50DE83-CE75-4D31-B0AA-F3FD905AAD5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeChimp.Backend.Assessment.UnitTests", "test\TimeChimp.Backend.Assessment.UnitTests\TimeChimp.Backend.Assessment.UnitTests.csproj", "{5F1F29C0-3C24-4831-BFAC-BC52DA38C1F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution files", "Solution files", "{C405F037-3438-4FAE-B093-975FABE835D8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.version = .version
+		NuGet.Config = NuGet.Config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8CDACB80-AFD6-4758-874A-208873F0E28B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DA9EF3F9-B7EF-46C2-8AAF-ADC9CF8EC25E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeChimp.Core", "TimeChimp.Core\TimeChimp.Core.csproj", "{DC0E997D-8072-4750-94C5-EAEB99F82D29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeChimp.Infrastructure", "TimeChimp.Infrastructure\TimeChimp.Infrastructure.csproj", "{E9A462E4-27F5-49E3-9D04-4F568D673AF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED50DE83-CE75-4D31-B0AA-F3FD905AAD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED50DE83-CE75-4D31-B0AA-F3FD905AAD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED50DE83-CE75-4D31-B0AA-F3FD905AAD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED50DE83-CE75-4D31-B0AA-F3FD905AAD5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F1F29C0-3C24-4831-BFAC-BC52DA38C1F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F1F29C0-3C24-4831-BFAC-BC52DA38C1F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F1F29C0-3C24-4831-BFAC-BC52DA38C1F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F1F29C0-3C24-4831-BFAC-BC52DA38C1F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC0E997D-8072-4750-94C5-EAEB99F82D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0E997D-8072-4750-94C5-EAEB99F82D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0E997D-8072-4750-94C5-EAEB99F82D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0E997D-8072-4750-94C5-EAEB99F82D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A462E4-27F5-49E3-9D04-4F568D673AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A462E4-27F5-49E3-9D04-4F568D673AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A462E4-27F5-49E3-9D04-4F568D673AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A462E4-27F5-49E3-9D04-4F568D673AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED50DE83-CE75-4D31-B0AA-F3FD905AAD5C} = {8CDACB80-AFD6-4758-874A-208873F0E28B}
+		{5F1F29C0-3C24-4831-BFAC-BC52DA38C1F6} = {DA9EF3F9-B7EF-46C2-8AAF-ADC9CF8EC25E}
+		{DC0E997D-8072-4750-94C5-EAEB99F82D29} = {8CDACB80-AFD6-4758-874A-208873F0E28B}
+		{E9A462E4-27F5-49E3-9D04-4F568D673AF5} = {8CDACB80-AFD6-4758-874A-208873F0E28B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28732EF2-85C6-4D09-AB62-127E57354FF9}
+	EndGlobalSection
+EndGlobal
