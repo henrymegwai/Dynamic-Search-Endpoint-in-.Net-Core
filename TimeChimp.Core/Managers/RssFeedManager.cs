@@ -63,7 +63,7 @@ namespace TimeChimp.Core.Managers
 
             var rssFeedsResults = query == currentFilter ? rssFeeds : rssFeeds.Where(p => p.Title.Contains(query) || p.Description.Contains(query) || p.Category.Contains(query) || p.Author.Contains(query));
             
-            RssFeedSortOrder sortOrder = !string.IsNullOrEmpty(sortBy) ? RssFeedSortOrder.title : sortBy.ToEnum<RssFeedSortOrder>();
+            RssFeedSortOrder sortOrder = string.IsNullOrEmpty(sortBy) ? RssFeedSortOrder.title : sortBy.ToEnum<RssFeedSortOrder>();
             switch (sortOrder)
             {
                 case RssFeedSortOrder.title:
