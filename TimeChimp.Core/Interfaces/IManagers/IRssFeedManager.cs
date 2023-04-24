@@ -13,5 +13,6 @@ namespace TimeChimp.Core.Interfaces.IManagers
     {
         List<RssFeedItem> LoadRssFeed();
         PaginatedList<RssFeedItem> SearchRssFeeds(string query, string currentFilter, string sortby, int pageNumber = 1, int pageSize = 20);
+        ExecutionResponse<PaginatedList<RssFeedItem>> SearchRssFeedsV2(string query, string currentFilter, string sortBy, int pageNumber = 1, int pageSize = 20);
     }
 }

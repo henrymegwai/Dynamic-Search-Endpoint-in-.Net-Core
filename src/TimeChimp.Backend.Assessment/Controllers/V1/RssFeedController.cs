@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
 using TimeChimp.Core.Interfaces.IManagers;
 using TimeChimp.Core.Utlilities;
+using TimeChimp.Core.Models;
 
 namespace TimeChimp.Backend.Assessment.Controllers.V1
 {
@@ -45,5 +46,21 @@ namespace TimeChimp.Backend.Assessment.Controllers.V1
             return Ok(rssFeedPaginated);
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="searchquery"></param>
+        /// <param name="sortBy"> title, title_desc, date, date_desc</param>
+        /// <param name="pageNumber"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        [HttpGet("searchv2/{searchquery}/{sortBy}/{pageNumber}/{pageSize}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IActionResult SearchV2(string searchquery, string sortBy = "title", int pageNumber = 1, int pageSize = 20)
+        {
+            var rssFeedPaginated = _rssFeedManager.SearchRssFeedsV2(searchquery, currentFilter: "All", sortBy, pageNumber, pageSize);
+            return Ok(rssFeedPaginated);
+        }
     }
 }
