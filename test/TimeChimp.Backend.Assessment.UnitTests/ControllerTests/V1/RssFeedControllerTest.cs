@@ -9,6 +9,7 @@ using TimeChimp.Core.Utlilities;
 using Moq;
 using TimeChimp.Core.Interfaces.IManagers;
 using TimeChimp.Core.Models;
+using System.Collections.Generic;
 
 namespace TimeChimp.Backend.Assessment.UnitTests.ControllerTests.V1
 {
@@ -94,6 +95,37 @@ namespace TimeChimp.Backend.Assessment.UnitTests.ControllerTests.V1
             Assert.True(okResult.StatusCode == 200);
             //Assert that result value matches mocked result.
             Assert.True(okResult.Value.Equals(response));
+
+
+
+            // Test for no record found
+            // Arrange
+            string searchquery2 = "!";
+
+            ExecutionResponse<PaginatedList<RssFeedItem>> anotherResponse = new ExecutionResponse<PaginatedList<RssFeedItem>>();
+            anotherResponse.Data = new PaginatedList<RssFeedItem>(new List<RssFeedItem> { }, 0, 1, 20);
+            anotherResponse.PageNumber = 1;
+            anotherResponse.ItemCount = 0;
+            anotherResponse.Status = true;
+            anotherResponse.Message = anotherResponse.Data.Count > 0 ? "Successful" : "No record(s) found";
+
+           
+            mock.Setup(p => p.SearchRssFeedsV2(searchquery2, currentFilter, sortBy, pageNumber, pageSize)).Returns(anotherResponse);
+            RssFeedController rssFeedController = new RssFeedController(mock.Object);
+
+
+
+            //Call the tested method
+            var searchResult = rssFeedController.SearchV2(searchquery2, sortBy, pageNumber, pageSize);
+
+            //Check the result
+            var expectedResult = searchResult as OkObjectResult;
+            //assert that result is 200 ok staus
+            Assert.True(expectedResult.StatusCode == 200);
+            var executedResponse = expectedResult.Value as ExecutionResponse<PaginatedList<RssFeedItem>>;
+            //Assert that result value returns no record.
+            Assert.True(executedResponse.Message.Equals("No record(s) found"));
+
         }
     }
 }
