@@ -1,13 +1,13 @@
-# TimeChimp.Backend.Assessment
+# Dynamic Search endpoint Functionality
 
 ## Setup
 
 - Fork this repo
-- Create a directory `C:\TimeChimpPackages` and copy all packages from `./packages` to this directory (or change path in ./nuget.config)
+- change path in ./nuget.config
 
 ## Run
 
-- Open your C# editor of choice and run app TimeChimp.Backend.Assessment
+- Open your C# editor of choice and run app
 
 ## Assessment
 
