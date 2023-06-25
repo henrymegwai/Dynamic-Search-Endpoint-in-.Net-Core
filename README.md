@@ -9,7 +9,7 @@
 
 - Open your C# editor of choice and run app
 
-## Assessment
+## Background Info
 
 Nu.nl, one of the Netherlands most-popular newssites, offers RSS feeds. 
 
